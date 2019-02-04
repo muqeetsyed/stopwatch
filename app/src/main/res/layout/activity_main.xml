@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
+        android:id="@+id/header">
+
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#060505"
+            android:textSize="30sp" />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/body"
+        android:layout_below="@+id/header"
+        android:background="#99558e83">
+
+        <ListView
+            android:id="@+id/list_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:textAlignment="center"
+            android:padding="10dp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/footer"
+        android:layout_below="@+id/body"
+        >
+
+
+        <Button
+            android:id="@+id/button_start"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:text="START"
+            android:onClick="onClick"
+            android:textColor="#9e1d1d"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/button_lap"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_alignStart="@+id/button_start"
+            android:layout_centerVertical="true"
+            android:text="lap"
+            android:visibility="invisible"
+            android:onClick="onClick"
+            android:textColor="#9e1d1d"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/button_pause"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_alignEnd="@+id/button_start"
+            android:layout_centerVertical="true"
+            android:text="pause"
+            android:visibility="invisible"
+            android:onClick="onClick"
+            android:textColor="#9e1d1d"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/button_reset"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_alignStart="@+id/button_start"
+            android:layout_centerVertical="true"
+            android:text="reset"
+            android:visibility="invisible"
+            android:onClick="onClick"
+            android:textColor="#9e1d1d"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/button_continue"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_alignEnd="@+id/button_start"
+            android:layout_centerVertical="true"
+            android:text="continue"
+            android:visibility="invisible"
+            android:onClick="onClick"
+            android:textColor="#9e1d1d"
+            android:textSize="20dp"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
